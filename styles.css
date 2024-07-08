@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messaging-app {
+    display: flex;
+    width: calc(100% - 40px); /* Adjusted to leave a 20px margin on each side */
+    height: calc(100% - 40px); /* Adjusted to leave a 20px margin on top and bottom */
+    margin: 20px; /* Margin to leave space around the content */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 12px 0 0 12px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Underline the "Contacts" text */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar form {
+    margin-top: 20px;
+    border-top: 1px solid white; /* White line to separate the contacts list and the section for adding contacts */
+    padding-top: 20px;
+}
+
+.sidebar form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.sidebar form button {
+    background-color: #ffffff;
+    color: #2980b9;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.sidebar form button:hover {
+    background-color: #f0f0f0;
+}
+
+.chat {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: #2980b9; /* Blue background for the entire chat area before contact selection */
+    border-radius: 0 12px 12px 0;
+}
+
+.chat-header {
+    background-color: #2980b9; /* Blue background for the contact header */
+    padding: 10px;
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.chat-header p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Background color of the chat area after contact selection */
+    overflow-y: auto;
+    max-height: 100%;
+    display: none; /* Initially hidden */
+}
+
+.messages.active {
+    display: block; /* Show messages area when active */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.message.sent {
+    background-color: #2980b9; /* Blue background for sent messages */
+    color: white; /* White text for sent messages */
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #d3d3d3; /* Grey background for received messages */
+    color: black; /* Black text for received messages */
+    align-self: flex-start;
+}
+
+.chat form {
+    display: flex;
+    align-items: center;
+    background-color: #2980b9; /* Blue background for the message input area */
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+}
+
+.chat form textarea {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+.chat form button {
+    background-color: #ffffff;
+    color: #2980b9;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.chat form button:hover {
+    background-color: #f0f0f0;
+}
+
+nav {
+    background-color: #2980b9; /* Blue background */
+    color: white;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 2px solid white; /* White line separating navigation container */
+}
+
+.nav-container {
+    display: flex;
+    justify-content:flex-start;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav a.active,
+nav a:hover {
+    text-decoration: underline;
+}
